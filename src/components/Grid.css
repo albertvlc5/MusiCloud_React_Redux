@@ -1,0 +1,95 @@
+/*Start Card*/
+
+.card {
+    background: grey;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: black;
+    box-shadow: 0 4px 8px 0 rgba(50, 50, 50, 2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline-block;
+    height: 200px;
+    margin: 2rem;
+    position: relative;
+    width: 220px;
+    padding: 5px;
+}
+
+.card-2 {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 1.5), 0 3px 6px rgba(0, 0, 0, 1.5);
+}
+
+
+/* Card bottoms */
+
+.avatar {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background-image: url('/img/musicloud.jpg')
+}
+
+.song-card-title,
+.song-card-user-username {
+    border: black;
+    color: #222;
+    display: block;
+    font-size: 15px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.song-card-bottom-div {
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+
+/* Image - play button overlay*/
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.cover_image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    background-image: url('/img/musicloud.jpg')
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .cover_image {
+    opacity: 0.25;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    color: black;
+    font-size: 25px;
+}
+
+.song-card-user-username {
+    text-emphasis-color: black;
+}
