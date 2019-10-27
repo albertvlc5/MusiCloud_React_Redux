@@ -56,17 +56,17 @@ class Grid extends Component {
                   <a className="song-card-title">
                     {track.title}
                   </a>
+                  <a className="song-card-username">
+                    {track.genre}   </a>
 
 
                   {/*
-                   <a className="song-card-user-username">
+                   <a className="song-card-created_at">
                     {track.created_at}   </a>
 
-                    <a className="song-card-user-username">
+                    <a className="song-card-permalink">
                     {track.permalink}   </a>
 
-                     <a className="song-card-user-username">
-                    {track.user.username}   </a>
                   
                    */}
 
