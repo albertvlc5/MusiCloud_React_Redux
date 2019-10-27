@@ -20,7 +20,7 @@ class App extends Component {
       
       <div>
         <div>
-            &#127926; <input type="search" name="busqueda" placeholder="Introduzca el artista.."/>
+            &#127926; <input type="search" name="busqueda" placeholder="Introduzca el artista.."  onChangeText={() => this.props.fetchTracks()}/>
             <button type="submit">Buscar</button>
         </div>
         
