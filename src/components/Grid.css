@@ -18,6 +18,12 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 1.5), 0 3px 6px rgba(0, 0, 0, 1.5);
 }
 
+.card:hover {
+    height: 300px;
+    width: 330px;
+    padding: 5px;
+}
+
 
 /* Card bottoms */
 

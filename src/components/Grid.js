@@ -21,6 +21,7 @@ class Grid extends Component {
                 this.props.pause_track();
             }else{
                 this.props.play_track(id);
+
             }
         }else{
             this.props.play_track(id);

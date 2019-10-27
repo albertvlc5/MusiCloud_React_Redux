@@ -25,11 +25,6 @@ class App extends Component {
     alert('A name was submitted: ' + this.state.value);
     event.preventDefault();
   }
-
-
- /*  state = {
-    searchText:'',
-  }; */
   
   
   render() {
