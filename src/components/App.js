@@ -11,6 +11,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.props.fetchTracks("Eminem");
+    //this.props.fetchTracks("") El que añada sera el que me saldra por defecto al cargar la pagina
   }
   
   

@@ -56,11 +56,13 @@ class Grid extends Component {
                   <a className="song-card-title">
                     {track.title}
                   </a>
-                  <a className="song-card-username">
-                    {track.genre}   </a>
+                  
 
 
                   {/*
+                    <a className="song-card-genre">
+                    {track.genre}   </a>
+
                    <a className="song-card-created_at">
                     {track.created_at}   </a>
 
