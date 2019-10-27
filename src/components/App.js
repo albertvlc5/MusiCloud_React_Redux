@@ -12,11 +12,24 @@ class App extends Component {
     super(props);
     //this.props.fetchTracks("Eminem");
     //this.props.fetchTracks("") El que añada sera el que me saldra por defecto al cargar la pagina
+    this.state = {value: ''};
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  state = {
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+
+  handleSubmit(event) {
+    alert('A name was submitted: ' + this.state.value);
+    event.preventDefault();
+  }
+
+
+ /*  state = {
     searchText:'',
-  };
+  }; */
   
   
   render() {
@@ -24,8 +37,8 @@ class App extends Component {
       
       <div>
         <div>
-            &#127926; <input type="search" name="busqueda" placeholder="Introduzca el artista.."   onChangeText={() => this.searchText}/>
-            <button type="submit" onClick={() => this.props.fetchTracks(this.state.searchText)}>Buscar</button>
+            &#127926; <input type="search" name="busqueda" placeholder="Introduzca el artista.."  value={this.state.value} onChange={this.handleChange}/>
+            <button type="submit" onClick={() => this.props.fetchTracks(this.state.value)}>Buscar</button>
         </div>
         
         <div className="loader" style={{ display:(this.props.tracksObj.fetching)?'block': 'none' }}>
