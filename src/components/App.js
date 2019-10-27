@@ -10,9 +10,13 @@ import {fetchTracks} from "../actions/actions_tracks"
 class App extends Component {
   constructor(props) {
     super(props);
-    this.props.fetchTracks("Eminem");
+    //this.props.fetchTracks("Eminem");
     //this.props.fetchTracks("") El que añada sera el que me saldra por defecto al cargar la pagina
   }
+
+  state = {
+    searchText:'',
+  };
   
   
   render() {
@@ -20,8 +24,8 @@ class App extends Component {
       
       <div>
         <div>
-            &#127926; <input type="search" name="busqueda" placeholder="Introduzca el artista.."  onChangeText={() => this.props.fetchTracks()}/>
-            <button type="submit">Buscar</button>
+            &#127926; <input type="search" name="busqueda" placeholder="Introduzca el artista.."   onChangeText={() => this.searchText}/>
+            <button type="submit" onClick={() => this.props.fetchTracks(this.state.searchText)}>Buscar</button>
         </div>
         
         <div className="loader" style={{ display:(this.props.tracksObj.fetching)?'block': 'none' }}>
